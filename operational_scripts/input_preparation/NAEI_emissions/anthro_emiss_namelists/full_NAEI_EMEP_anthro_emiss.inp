@@ -1,0 +1,59 @@
+&CONTROL
+ anthro_dir = 'input/emissions_netcdf'
+ wrf_dir = '.'
+ src_file_prefix = ''
+ domains = 1
+ src_file_suffix = '_emiss.nc' 
+ src_names = 'nmvoc(1)','co(1)','nh3(1)','nox(1)','so2(1)','pm2_5(1)','pm10(1)'
+ ! Note NMVOC is set to mol weight of 1 - > will give emissions in "g"/km^2/hr.
+ ! When splitting into subspecies, must divide by molecular weight to give mol emissions.
+  
+ sub_categories  = 'agric',
+                   'domcom',
+                   'energyprod',
+                   'indcom',
+                   'indproc',
+                   'nature',
+                   'offshore',
+                   'othertrans',
+                   'roadtrans',
+                   'solvents',
+                   'total',
+                   'totarea',
+                   'waste'
+ cat_var_prefix  = ' '
+ serial_output   = .true.
+ start_output_time = '2017-01-01_00:00:00'
+ stop_output_time = '2017-01-01_00:00:00'
+ data_yrs_offset = +0
+ emissions_zdim_stag = 1
+ emis_map = 'voc_sec01(a)->nmvoc(energyprod)','voc_sec02(a)->nmvoc(domcom)','voc_sec03(a)->nmvoc(indcom)',
+	'voc_sec04(a)->nmvoc(indproc)','voc_sec05(a)->nmvoc(offshore)','voc_sec06(a)->nmvoc(solvents)',
+	'voc_sec07(a)->nmvoc(roadtrans)','voc_sec08(a)->nmvoc(othertrans)','voc_sec09(a)->nmvoc(waste)',
+	'voc_sec10(a)->nmvoc(agric)','voc_sec11(a)->nmvoc(nature)','voc_point(a)->nmvoc(-1.0*totarea+total)',
+	'co_sec01(a)->co(energyprod)','co_sec02(a)->co(domcom)','co_sec03(a)->co(indcom)',
+	'co_sec04(a)->co(indproc)','co_sec05(a)->co(offshore)','co_sec06(a)->co(solvents)',
+	'co_sec07(a)->co(roadtrans)','co_sec08(a)->co(othertrans)','co_sec09(a)->co(waste)',
+	'co_sec10(a)->co(agric)','co_sec11(a)->co(nature)','co_point(a)->co(-1.0*totarea+total)',
+	'nh3_sec01(a)->nh3(energyprod)','nh3_sec02(a)->nh3(domcom)','nh3_sec03(a)->nh3(indcom)',
+	'nh3_sec04(a)->nh3(indproc)','nh3_sec05(a)->nh3(offshore)','nh3_sec06(a)->nh3(solvents)',
+	'nh3_sec07(a)->nh3(roadtrans)','nh3_sec08(a)->nh3(othertrans)','nh3_sec09(a)->nh3(waste)',
+	'nh3_sec10(a)->nh3(agric)','nh3_sec11(a)->nh3(nature)','nh3_point(a)->nh3(-1.0*totarea+total)',
+	'nox_sec01(a)->nox(energyprod)','nox_sec02(a)->nox(domcom)','nox_sec03(a)->nox(indcom)',
+	'nox_sec04(a)->nox(indproc)','nox_sec05(a)->nox(offshore)','nox_sec06(a)->nox(solvents)',
+	'nox_sec07(a)->nox(roadtrans)','nox_sec08(a)->nox(othertrans)','nox_sec09(a)->nox(waste)',
+	'nox_sec10(a)->nox(agric)','nox_sec11(a)->nox(nature)','nox_point(a)->nox(-1.0*totarea+total)',
+	'sox_sec01(a)->so2(energyprod)','sox_sec02(a)->so2(domcom)','sox_sec03(a)->so2(indcom)',
+	'sox_sec04(a)->so2(indproc)','sox_sec05(a)->so2(offshore)','sox_sec06(a)->so2(solvents)',
+	'sox_sec07(a)->so2(roadtrans)','sox_sec08(a)->so2(othertrans)','sox_sec09(a)->so2(waste)',
+	'sox_sec10(a)->so2(agric)','sox_sec11(a)->so2(nature)','sox_point(a)->so2(-1.0*totarea+total)',
+	'pm25_sec01(a)->pm2_5(energyprod)','pm25_sec02(a)->pm2_5(domcom)','pm25_sec03(a)->pm2_5(indcom)',
+	'pm25_sec04(a)->pm2_5(indproc)','pm25_sec05(a)->pm2_5(offshore)','pm25_sec06(a)->pm2_5(solvents)',
+	'pm25_sec07(a)->pm2_5(roadtrans)','pm25_sec08(a)->pm2_5(othertrans)','pm25_sec09(a)->pm2_5(waste)',
+	'pm25_sec10(a)->pm2_5(agric)','pm25_sec11(a)->pm2_5(nature)','pm25_point(a)->pm2_5(-1.0*totarea+total)',
+	'pmco_sec01(a)->pm10(energyprod)','pmco_sec02(a)->pm10(domcom)','pmco_sec03(a)->pm10(indcom)',
+	'pmco_sec04(a)->pm10(indproc)','pmco_sec05(a)->pm10(offshore)','pmco_sec06(a)->pm10(solvents)',
+	'pmco_sec07(a)->pm10(roadtrans)','pmco_sec08(a)->pm10(othertrans)','pmco_sec09(a)->pm10(waste)',
+	'pmco_sec10(a)->pm10(agric)','pmco_sec11(a)->pm10(nature)','pmco_point(a)->pm10(-1.0*totarea+total)'
+/
+
