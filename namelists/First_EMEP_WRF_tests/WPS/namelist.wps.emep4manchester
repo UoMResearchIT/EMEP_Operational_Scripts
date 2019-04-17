@@ -1,0 +1,50 @@
+&share
+ wrf_core = 'ARW',
+ max_dom = 3,
+ start_date = '2018-08-01_00:00:00','2018-08-01_00:00:00','2018-08-01_00:00:00',
+ end_date   = '2018-08-10_00:00:00','2018-08-10_00:00:00','2018-08-10_00:00:00',
+ interval_seconds = 21600
+ io_form_geogrid = 2,
+/
+
+&geogrid
+ parent_id         =   1,   1,   2,
+ parent_grid_ratio =   1,   5,   5,
+ i_parent_start    =   1,  65,  75,
+ j_parent_start    =   1,  40,  40,
+ e_we              = 171, 161, 191,
+ e_sn              = 134, 161, 191,
+ !
+ !!!!!!!!!!!!!!!!!!!!!!!!!!!! IMPORTANT NOTE !!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ ! The default datasets used to produce the MAXSNOALB and ALBEDO12M
+ ! fields have changed in WPS v4.0. These fields are now interpolated
+ ! from MODIS-based datasets.
+ !
+ ! To match the output given by the default namelist.wps in WPS v3.9.1,
+ ! the following setting for geog_data_res may be used:
+ !
+ ! geog_data_res = 'maxsnowalb_ncep+albedo_ncep+default', 'maxsnowalb_ncep+albedo_ncep+default', 
+ !
+ !!!!!!!!!!!!!!!!!!!!!!!!!!!! IMPORTANT NOTE !!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ !
+ geog_data_res = 'default','default','default',
+ dx = 50000,
+ dy = 50000,
+ map_proj = 'polar',
+ ref_lat   =  57.76,
+ ref_lon   =  6.2041,
+ truelat1  =  60.0,
+ truelat2  =  90.0,
+ stand_lon = -32.0,
+ geog_data_path = '/mnt/iusers01/support/mbessdl2/WRF/geog_data/WPS_GEOG_version4/'
+/
+
+&ungrib
+ out_format = 'WPS',
+ prefix = 'FILE',
+/
+
+&metgrid
+ fg_name = '3DFILE', 'SFCFILE',
+ io_form_metgrid = 2, 
+/
