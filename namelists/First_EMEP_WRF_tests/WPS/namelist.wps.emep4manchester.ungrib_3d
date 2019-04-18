@@ -36,7 +36,7 @@
  truelat1  =  60.0,
  truelat2  =  90.0,
  stand_lon = -32.0,
- geog_data_path = '/mnt/iusers01/support/mbessdl2/WRF/geog_data/WPS_GEOG_version4/'
+ geog_data_path = './geog/'
 /
 
 &ungrib
