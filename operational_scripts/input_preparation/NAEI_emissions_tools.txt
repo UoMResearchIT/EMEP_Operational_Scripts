@@ -1,2 +1,0 @@
-NCL/python scripts for processing NAEI emissions are available here:
-https://github.com/douglowe/NAEI_WRF_Emission_Tools.git
