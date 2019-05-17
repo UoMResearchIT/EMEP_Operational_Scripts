@@ -1,19 +1,19 @@
 &share
  wrf_core = 'ARW',
- max_dom = 3,
- start_date = '2018-08-01_00:00:00','2018-08-01_00:00:00','2018-08-01_00:00:00',
- end_date   = '2018-08-10_00:00:00','2018-08-10_00:00:00','2018-08-10_00:00:00',
+ max_dom = 1,
+ start_date = '2018-08-01_00:00:00',
+ end_date   = '2018-08-31_00:00:00',
  interval_seconds = 21600
  io_form_geogrid = 2,
 /
 
 &geogrid
- parent_id         =   1,   1,   2,
- parent_grid_ratio =   1,   5,   5,
- i_parent_start    =   1,  65,  75,
- j_parent_start    =   1,  40,  40,
- e_we              = 171, 161, 191,
- e_sn              = 134, 161, 191,
+ parent_id         =   1,
+ parent_grid_ratio =   1,
+ i_parent_start    =   1,
+ j_parent_start    =   1,
+ e_we              = 171,
+ e_sn              = 134,
  !
  !!!!!!!!!!!!!!!!!!!!!!!!!!!! IMPORTANT NOTE !!!!!!!!!!!!!!!!!!!!!!!!!!!!
  ! The default datasets used to produce the MAXSNOALB and ALBEDO12M
@@ -27,7 +27,7 @@
  !
  !!!!!!!!!!!!!!!!!!!!!!!!!!!! IMPORTANT NOTE !!!!!!!!!!!!!!!!!!!!!!!!!!!!
  !
- geog_data_res = 'default','default','default',
+ geog_data_res = 'default',
  dx = 50000,
  dy = 50000,
  map_proj = 'polar',
