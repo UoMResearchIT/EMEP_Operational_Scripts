@@ -39,12 +39,7 @@
  geog_data_path = './geog/'
 /
 
-&ungrib
- out_format = 'WPS',
- prefix = 'FILE',
-/
-
 &metgrid
- fg_name = '3DFILE', 'SFCFILE',
+ fg_name = 'ATMFILE', 'SFCFILE',
  io_form_metgrid = 2, 
 /
