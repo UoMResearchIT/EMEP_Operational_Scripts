@@ -4,7 +4,7 @@
   runlabel1 = 'Base',
   runlabel2 = 'rv4_18',
   startdate = 2018,08,01,00,
-  enddate   = 2018,08,09,24,
+  enddate   = 2018,08,31,00,
 &end
 &Machine_config
 !DataDir will attempted replaced by (in this order):
