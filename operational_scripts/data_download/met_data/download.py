@@ -21,7 +21,7 @@ while (idate <= edate):
     strdate = "%d%02d%02d" % (iyear, imonth, iday)
     print strdate   
 
-    # extract 3D data
+    # extract 3D volume (ATM) data
     server.retrieve({
         'dataset' : "interim",
         'step'    : "0",
@@ -33,10 +33,10 @@ while (idate <= edate):
         'type'    : "an",
         'param'   : "129/130/131/132/157",
         'grid'    : "128",
-        'target'  : "pl_"+strdate+".grib"
+        'target'  : "atm_"+strdate+".grib"
         })
 
-    # extract surface data
+    # extract surface (SFC) data
     server.retrieve({
         'dataset' : "interim",
         'step'    : "0",
