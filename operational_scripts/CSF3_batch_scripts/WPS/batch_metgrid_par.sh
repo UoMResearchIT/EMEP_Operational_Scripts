@@ -2,16 +2,15 @@
 #$ -cwd
 #$ -pe smp.pe 4
 
-module load use.own
-module load priv_libs/gcc/netcdf/4.6.2
-module load priv_libs/gcc/jasper/2.0.14
-module load priv_libs/gcc/libpng/1.6.36
-module load mpi/gcc/openmpi/3.1.3
+module load libs/gcc/netcdf/4.6.2
+module load libs/gcc/jasper/2.0.14
+module load libs/gcc/libpng/1.6.36
+module load mpi/gcc/openmpi/3.1.4
 
 # Minimalistic script for run the Unified EMEP model
 
 
 
 # Run the model
-mpiexec --mca btl ^vader -np 4 ./metgrid.exe 2>&1 | tee metgrid.log
+mpiexec -np 4 ./metgrid.exe 2>&1 | tee metgrid.log
 
