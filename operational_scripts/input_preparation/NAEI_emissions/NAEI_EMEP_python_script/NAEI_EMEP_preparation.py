@@ -162,7 +162,7 @@ def write_to_netcdf(emiss_data,species_list,output_path,netcdf_names):
         ds_working = emiss_data[species]
 
         # write to netcdf file
-        outfile = output_path+netcdf_names[species]+'_data.nc'
+        outfile = output_path+netcdf_names[species]+'_emiss.nc'
         ds_working.to_netcdf(path=outfile,mode='w')
 
 
