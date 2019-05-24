@@ -55,7 +55,7 @@ netcdf_names ={"CH4"  :"ch4",\
                "PM1"  :"pm1",\
                "PM25" :"pm25",\
                "PM10" :"pmco",\
-               "SO2"  :"so2"}
+               "SO2"  :"sox"}
 
 input_paths = {value: root_dir+value+"/" for value in species_dir}
 input_tails = {value: species_str[value]+root_tail for value in species_dir}
