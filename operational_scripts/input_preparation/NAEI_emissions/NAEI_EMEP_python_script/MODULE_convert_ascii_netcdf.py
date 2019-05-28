@@ -150,7 +150,8 @@ def create_NAEI_data_template(headers,Global_Atts):
 
 
 def load_emission_data(species_dir,species_str,input_paths,var_names,input_tails,\
-                                            header_end,Atts,Atts_Sector,Global_Atts):
+                                            header_end,Atts,Atts_Sector,Global_Atts,\
+                                            emep_names):
     """
     Creates emission and data set templates, loads emission data into 
     these, and returns a dictionary containing all the xarray datasets.
@@ -185,6 +186,12 @@ def load_emission_data(species_dir,species_str,input_paths,var_names,input_tails
 
             test_file = input_paths[species]+emiss+input_tails[species]
             emiss_data = emiss_template.copy(deep=True)
+            
+            # add the EMEP specific species name
+            try:
+                emiss_data.attrs['species'] = emep_names[species]
+            except:
+                pass
             
             # add the EMEP specific sector code (where needed)
             try:

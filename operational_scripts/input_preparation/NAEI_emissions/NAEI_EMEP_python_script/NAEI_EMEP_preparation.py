@@ -45,7 +45,7 @@ species_str = {"CH4"  :"ch4",\
                "PM25" :"pm2_5",\
                "PM10" :"pm10",\
                "SO2"  :"so2"}
-netcdf_names ={"CH4"  :"ch4",\
+emep_names =  {"CH4"  :"ch4",\
                "CO"   :"co",\
                "HCl"  :"hcl",\
                "NH3"  :"nh3",\
@@ -175,7 +175,8 @@ if __name__=='__main__':
     ## load the emissions data - returning a dictionary containing all datasets
     print('==== Initiating Loading Emission Data ====')
     emiss_data = can.load_emission_data(species_dir,species_str,input_paths,var_names,input_tails,\
-                                                        header_end,EMEP_Att,EMEP_sect_map,EMEP_Global_Att)
+                                                        header_end,EMEP_Att,EMEP_sect_map,EMEP_Global_Att,\
+                                                        emep_names)
 
 
     ## point source processing
@@ -187,7 +188,7 @@ if __name__=='__main__':
 
     ## write emissions data to file
     print('==== Writing emissions to netcdf files ====')
-    write_to_netcdf(emiss_data,species_dir,output_path,netcdf_names)
+    write_to_netcdf(emiss_data,species_dir,output_path,emep_names)
 
 
 
