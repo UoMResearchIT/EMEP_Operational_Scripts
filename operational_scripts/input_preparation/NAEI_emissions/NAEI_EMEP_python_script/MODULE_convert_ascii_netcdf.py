@@ -187,15 +187,10 @@ def load_emission_data(species_dir,species_str,input_paths,var_names,input_tails
             test_file = input_paths[species]+emiss+input_tails[species]
             emiss_data = emiss_template.copy(deep=True)
             
-            # add the EMEP specific species name
-            try:
-                emiss_data.attrs['species'] = emep_names[species]
-            except:
-                pass
-            
-            # add the EMEP specific sector code (where needed)
+            # add the EMEP specific sector code and species name (where needed)
             try:
                 emiss_data.attrs['sector'] = Atts_Sector[emiss]
+                emiss_data.attrs['species'] = emep_names[species]
             except:
                 pass
 
