@@ -10,10 +10,10 @@
 &geogrid
  parent_id         =   1,  1,    1  
  parent_grid_ratio =   1,  3,    3  
- i_parent_start    =   1,  160,  120
- j_parent_start    =   1,  65,   185
- e_we              = 361,  361,  361
- e_sn              = 361,  361,  361
+ i_parent_start    =   1,  200,  205
+ j_parent_start    =   1,  140,  195
+ e_we              = 361,  121,  121
+ e_sn              = 361,  121,  121
  !
  !!!!!!!!!!!!!!!!!!!!!!!!!!!! IMPORTANT NOTE !!!!!!!!!!!!!!!!!!!!!!!!!!!!
  ! The default datasets used to produce the MAXSNOALB and ALBEDO12M
@@ -39,12 +39,7 @@
  geog_data_path = './geog/'
 /
 
-&ungrib
- out_format = 'WPS',
- prefix = 'FILE',
-/
-
 &metgrid
- fg_name = '3DFILE', 'SFCFILE',
+ fg_name = 'ATMFILE', 'SFCFILE',
  io_form_metgrid = 2, 
 /
