@@ -104,26 +104,26 @@
   emis_inputlist(2)%type  = 'DMS',    ! Needs ad-hoc treatment
 
 
-!  Emis_sourceFiles(1)%filename = 'DataDir/NAEI_raw_labeled/co_emiss.nc'
-!  Emis_sourceFiles(1)%periodicity = 'yearly',
-! 
-!  Emis_sourceFiles(2)%filename = 'DataDir/NAEI_raw_labeled/nox_emiss.nc'
-!  Emis_sourceFiles(2)%periodicity = 'yearly',
-! 
-!  Emis_sourceFiles(3)%filename = 'DataDir/NAEI_raw_labeled/nh3_emiss.nc'
-!  Emis_sourceFiles(3)%periodicity = 'yearly',
-! 
-!  Emis_sourceFiles(4)%filename = 'DataDir/NAEI_raw_labeled/voc_emiss.nc'
-!  Emis_sourceFiles(4)%periodicity = 'yearly',
-! 
-!  Emis_sourceFiles(5)%filename = 'DataDir/NAEI_raw_labeled/sox_emiss.nc'
-!  Emis_sourceFiles(5)%periodicity = 'yearly',
-! 
-!  Emis_sourceFiles(6)%filename = 'DataDir/NAEI_raw_labeled/pm25_emiss.nc'
-!  Emis_sourceFiles(6)%periodicity = 'yearly',
-! 
-!  Emis_sourceFiles(7)%filename = 'DataDir/NAEI_raw_labeled/pmco_emiss.nc'
-!  Emis_sourceFiles(7)%periodicity = 'yearly',
+  Emis_sourceFiles(1)%filename = 'DataDir/NAEI_raw_labeled/co_emiss.nc'
+  Emis_sourceFiles(1)%periodicity = 'yearly',
+ 
+  Emis_sourceFiles(2)%filename = 'DataDir/NAEI_raw_labeled/nox_emiss.nc'
+  Emis_sourceFiles(2)%periodicity = 'yearly',
+ 
+  Emis_sourceFiles(3)%filename = 'DataDir/NAEI_raw_labeled/nh3_emiss.nc'
+  Emis_sourceFiles(3)%periodicity = 'yearly',
+ 
+  Emis_sourceFiles(4)%filename = 'DataDir/NAEI_raw_labeled/voc_emiss.nc'
+  Emis_sourceFiles(4)%periodicity = 'yearly',
+ 
+  Emis_sourceFiles(5)%filename = 'DataDir/NAEI_raw_labeled/sox_emiss.nc'
+  Emis_sourceFiles(5)%periodicity = 'yearly',
+ 
+  Emis_sourceFiles(6)%filename = 'DataDir/NAEI_raw_labeled/pm25_emiss.nc'
+  Emis_sourceFiles(6)%periodicity = 'yearly',
+ 
+  Emis_sourceFiles(7)%filename = 'DataDir/NAEI_raw_labeled/pmco_emiss.nc'
+  Emis_sourceFiles(7)%periodicity = 'yearly',
 
 
 
@@ -347,16 +347,16 @@ OutputConcs=
       'O3'                  ,'ug'  ,'2d','AIR_CONCS','SPEC' ,'YMD',
       'NO2'                 ,'ug'  ,'2d','AIR_CONCS','SPEC' ,'YMD',
       'NO'                  ,'ug'  ,'2d','AIR_CONCS','SPEC' ,'YMD',
-      'SO4'                 ,'ug'  ,'2d','AIR_CONCS','SPEC' ,'YMD',
-      'NO3_F'               ,'ug'  ,'2d','AIR_CONCS','SPEC' ,'YMD',
-      'NO3_C'               ,'ug'  ,'2d','AIR_CONCS','SPEC' ,'YMD',
-      'NH4_F'               ,'ug'  ,'2d','AIR_CONCS','SPEC' ,'YMD',
-      'SEASALT_F'           ,'ug'  ,'2d','AIR_CONCS','SPEC' ,'YMD',
-      'SEASALT_C'           ,'ug'  ,'2d','AIR_CONCS','SPEC' ,'YMD',
-      'DUST_ROAD_F'         ,'ug'  ,'2d','AIR_CONCS','SPEC' ,'YMD',
-      'DUST_ROAD_C'         ,'ug'  ,'2d','AIR_CONCS','SPEC' ,'YMD',
-      'DUST_WB_F'           ,'ug'  ,'2d','AIR_CONCS','SPEC' ,'YMD',
-      'DUST_WB_C'           ,'ug'  ,'2d','AIR_CONCS','SPEC' ,'YMD',
+      'SO4'                 ,'ug'  ,'2d','AIR_CONCS','SPEC' ,'YMDI',
+      'NO3_F'               ,'ug'  ,'2d','AIR_CONCS','SPEC' ,'YMDI',
+      'NO3_C'               ,'ug'  ,'2d','AIR_CONCS','SPEC' ,'YMDI',
+      'NH4_F'               ,'ug'  ,'2d','AIR_CONCS','SPEC' ,'YMDI',
+      'SEASALT_F'           ,'ug'  ,'2d','AIR_CONCS','SPEC' ,'YMDI',
+      'SEASALT_C'           ,'ug'  ,'2d','AIR_CONCS','SPEC' ,'YMDI',
+      'DUST_ROAD_F'         ,'ug'  ,'2d','AIR_CONCS','SPEC' ,'YMDI',
+      'DUST_ROAD_C'         ,'ug'  ,'2d','AIR_CONCS','SPEC' ,'YMDI',
+      'DUST_WB_F'           ,'ug'  ,'2d','AIR_CONCS','SPEC' ,'YMDI',
+      'DUST_WB_C'           ,'ug'  ,'2d','AIR_CONCS','SPEC' ,'YMDI',
       'DUST_SAH_F'          ,'ug'  ,'2d','AIR_CONCS','SPEC' ,'YMD',
       'DUST_SAH_C'          ,'ug'  ,'2d','AIR_CONCS','SPEC' ,'YMD',
 ! SHL TEST - ONLY molec/cm3 for 2d at least. Denote as molec
@@ -370,8 +370,8 @@ OutputConcs=
       'NO3'                 ,'ppb' ,'2d','AIR_CONCS','SPEC' ,'YMDI', 
       'N2O5'                ,'ppb' ,'2d','AIR_CONCS','SPEC' ,'YMDI', 
       'NH3'                 ,'ppb' ,'2d','AIR_CONCS','SPEC' ,'YMDI', 
-      'HNO3'                ,'ppb' ,'2d','AIR_CONCS','SPEC' ,'YMD', 
-      'OXN'                 ,'ppb' ,'2d','AIR_CONCS','GROUP','YMD', 
+      'HNO3'                ,'ppb' ,'2d','AIR_CONCS','SPEC' ,'YMDI', 
+      'OXN'                 ,'ppb' ,'2d','AIR_CONCS','GROUP','YMDI', 
       'SO2'                 ,'ppb' ,'2d','AIR_CONCS','SPEC' ,'YMDI', 
       'PAN'                 ,'ppb' ,'2d','AIR_CONCS','SPEC' ,'YMD',
       'MPAN'                ,'ppb' ,'2d','AIR_CONCS','SPEC' ,'YMD',
