@@ -87,10 +87,10 @@ EMEP_sect_map['indproc']    = 4
 EMEP_sect_map['offshore']   = 5
 EMEP_sect_map['solvents']   = 6
 EMEP_sect_map['roadtrans']  = 7
-EMEP_sect_map['othertrans'] = 9
-EMEP_sect_map['waste']      = 10
-EMEP_sect_map['agric']      = 11
-EMEP_sect_map['nature']     = 12
+EMEP_sect_map['othertrans'] = 8
+EMEP_sect_map['waste']      = 9
+EMEP_sect_map['agric']      = 10
+EMEP_sect_map['nature']     = 11
 
 EMEP_Global_Att = {}
 EMEP_Global_Att['periodicity'] = 'yearly'
