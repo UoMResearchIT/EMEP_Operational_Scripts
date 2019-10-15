@@ -1,0 +1,11 @@
+name: networkx_alpha
+
+channels:
+  - conda-forge
+  
+dependencies:
+  - networkx
+  - pygraphviz
+  - spyder
+  - matplotlib
+
